@@ -10,6 +10,10 @@ html {
     line-height: 8.7;
     font-size: 1.1rem;
     text-align: center;
+    background-color: red;
+    text-shadow: 1px  1px  1px black;
     color: white;
+    
+    
     
   }
