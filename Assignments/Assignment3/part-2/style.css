@@ -4,3 +4,8 @@ html {
   }
   
   /* Your CSS below here */
+  div {
+    width: 200px;
+    margin: auto;
+    line-height: 8.7;
+  }
