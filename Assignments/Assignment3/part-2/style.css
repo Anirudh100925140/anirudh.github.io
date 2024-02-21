@@ -8,4 +8,8 @@ html {
     width: 200px;
     margin: auto;
     line-height: 8.7;
+    font-size: 1.1rem;
+    text-align: center;
+    color: white;
+    
   }
