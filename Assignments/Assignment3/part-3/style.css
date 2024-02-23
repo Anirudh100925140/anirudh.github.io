@@ -16,7 +16,6 @@
     line-height: 1.6;
     letter-spacing: 0.5px;
     word-spacing: 2px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
   /* Layout */
@@ -52,3 +51,32 @@
   }
   
   /* WRITE YOUR CODE BELOW HERE */
+
+  /*editing the fonts*/
+
+
+  @font-face {
+    font-family: 'lemon_milklight';
+    src: url('lemonmilk-light-webfont.woff2') format('woff2'),
+         url('lemonmilk-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+  @font-face {
+    font-family: 'lemon_milkregular';
+    src: url('lemonmilk-regular-webfont.woff2') format('woff2'),
+        url('lemonmilk-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html{
+  font-family: 'lemon_milkregular';
+  font-size: 10px;
+}
+h1,h2{
+  font-family: 'lemon_milklight';
+  font-size: 40px;
+}
