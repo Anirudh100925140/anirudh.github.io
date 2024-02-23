@@ -163,6 +163,20 @@ nav li{
   margin-top: 0;
  }
 
+ nav li  a{
+  text-decoration: none;
+  display: block;
+  width: 150px;
+  padding: 10px;
+  color: #a66;
+  font-size: 1.6rem;
+  border: 2px solid #a66;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  text-align: center;
+ }
+
+
 
 
 
