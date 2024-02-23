@@ -6,6 +6,7 @@ html {
   /* Your CSS below here */
   div {
     width: 200px;
+    height: 200px;
     line-height: 8.7;
     inline-size: 10em;
     margin: auto;
