@@ -146,6 +146,10 @@ ul{
 ol{
   list-style-type: lower-latin;
 }
+/* navigation menu*/
+nav{
+  float: right;
+}
 
 
 
