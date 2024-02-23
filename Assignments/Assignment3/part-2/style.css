@@ -7,19 +7,24 @@ html {
   div {
     width: 200px;
     height: 200px;
-    line-height: 8.7;
+    line-height: 9;
     inline-size: 10em;
     margin: auto;
     margin-left: auto;
     margin-right: auto;
-    font-size: 1.12rem;/* font size is set in 1.12 rems.*/
+    font-size: 1.125rem;/* font size is set in 1.12 rems.*/
     text-align: center;
-    display: flex;
     align-items: center;
+    justify-content: center;
+    display: flex;
     background-color: red;
+    border-radius: 15px;
+    border: 1px solid brown;
     text-shadow: 1px  1px  1px black;
-    color: white;
-    
-    
-    
+    color: azure;
+    text-shadow: 1px 1px 1px black;
+    background-image: linear-gradient( to top left,rgba(0,0,0,0.2),rgba(0,0,0,0.2) 30%,rgba(0,0,0,0));
+    box-shadow: 2px 2px 5px black;
+    box-shadow: inset 2px 2px 3px rgba(255,255,255,0.6),
+     inset -2px -2px 5px rgba(0,0,0,0.6);   
   }
