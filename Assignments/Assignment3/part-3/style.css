@@ -102,11 +102,32 @@ section > h2 + p:first-of-type,
 section > h1 + p:first-of-type{
   text-indent: 20px;
 }
+/*lists*/
 
 ul,
 ol{
   font-size: 1.4rem;
 }
+
+/*links*/
+a {
+  font-size: 1.4rem;
+  color: #a66;
+  text-decoration: underline;
+  position: relative;
+}
+a:visited {
+  color:#794d35;
+}
+a:focus,
+a:hover {
+  text-decoration: none;
+  color:#d99;
+  outline: none;
+}
+
+
+
 
 
   
