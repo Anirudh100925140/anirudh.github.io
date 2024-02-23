@@ -156,7 +156,12 @@ nav ul{
   margin: 0;
   list-style-type: none;
 }
-
+nav li{
+  margin-bottom: 10px;
+}
+ navli:first-child {
+  margin-top: 0;
+ }
 
 
 
