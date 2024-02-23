@@ -12,10 +12,7 @@
     margin: 0 auto;
     min-width: 1000px;
     max-width: 1400px;
-    font-size: 1.6rem;
-    line-height: 1.6;
-    letter-spacing: 0.5px;
-    word-spacing: 2px;
+    
   }
   
   /* Layout */
@@ -80,3 +77,16 @@ h1,h2{
   font-family: 'lemon_milklight';
   font-size: 40px;
 }
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: 'lemon_milkregular';
+}
+
+h2 {
+  font-size: 3.2rem;
+}
+
+  
