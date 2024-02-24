@@ -83,11 +83,11 @@
 
 }
 html{
-  font-family: lemon_milkregular, serif;
+  font-family: 'lemon_milkregular', serif;
   font-size: 10px;
 }
 h1,h2{
-  font-family: lemon_milklight, sans-serif;
+  font-family: 'lemon_milklight', sans-serif;
   font-size: 40px;
 }
 
@@ -168,7 +168,7 @@ nav ul{
 nav li{
   margin-bottom: 10px;
 }
- navli:first-child {
+ nav li:first-child {
   margin-top: 0;
  }
 
