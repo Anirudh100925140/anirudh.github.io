@@ -5,39 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anirudh Assignments</title>
     <style>
-        /* Style for the links */
-        a {
-            display: block; /* Make links block-level elements */
-            padding: 10px; /* Add some padding for better spacing */
-            border: 1px solid black; /* Add border */
-            margin-bottom: 10px; /* Add margin to create space between links */
-            text-decoration: none; /* Remove underline */
+        /* Reset default margin and padding */
+        body, h1, h2, h3 {
+            margin: 0;
+            padding: 0;
         }
-        /* Style for the horizontal lines */
-        hr {
-            margin: 20px 0; /* Add margin for spacing */
-            border: none; /* Remove default border */
-            border-top: 1px solid black; /* Add border on top */
+
+        /* Global font styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5; /* Light gray background */
+            color: #333; /* Dark gray text */
+            line-height: 1.6;
         }
+
+        /* Container for assignments */
+        .assignments-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        }
+
         /* Style for the headers */
         h1, h2, h3 {
-            font-family: Arial, sans-serif; /* Change font family */
+            margin-bottom: 10px;
+            color: #555; /* Dark gray headers */
+        }
+
+        /* Style for the links */
+        a {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px 0;
+            border-radius: 4px;
+            background-color: #007bff; /* Blue background */
+            color: #fff; /* White text */
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Horizontal line style */
+        hr {
+            border: none;
+            border-top: 1px solid #ddd; /* Light gray line */
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
-    <h1>Assignments of Web development: </h1>
-    <a href="Assignments/Assignment1/letter.html"> Assignment1-part-1 </a>
-    <a href="Assignments/Assignment2/part 1/index.html">Assignment2-part-1</a>
-    <hr>
-    <h2>Assignment 2: </h2>
-    <a href="Assignments/Assignment1/part 2/assets/index.html"> Assignment1-part-2</a>
-    <a href="Assignments/Assignment2/part 2/index.html">Assignment2-part-2</a>
-    <hr>
-    <h3>Assignment 3: </h3>
-    <a href="Assignments/Assignment3/part-1/index.html">Assignmnet3-part-1</a>
-    <a href="Assignments/Assignment3/part-2/index.html">Assignmnet3-part-2</a>
-    <a href="Assignments/Assignment3/part-3/index.html">Assignmnet3-part-3</a>
-    <a href="Assignments/Assignment3/part-4/index.html">Assignmnet3-part-4</a>
+    <div class="assignments-container">
+        <h1>Assignments of Web development</h1>
+        <a href="Assignments/Assignment1/letter.html">Assignment 1 - Part 1</a>
+        <a href="Assignments/Assignment2/part 1/index.html">Assignment 2 - Part 1</a>
+        <hr>
+        <h2>Assignment 2</h2>
+        <a href="Assignments/Assignment1/part 2/assets/index.html">Assignment 1 - Part 2</a>
+        <a href="Assignments/Assignment2/part 2/index.html">Assignment 2 - Part 2</a>
+        <hr>
+        <h3>Assignment 3</h3>
+        <a href="Assignments/Assignment3/part-1/index.html">Assignment 3 - Part 1</a>
+        <a href="Assignments/Assignment3/part-2/index.html">Assignment 3 - Part 2</a>
+        <a href="Assignments/Assignment3/part-3/index.html">Assignment 3 - Part 3</a>
+        <a href="Assignments/Assignment3/part-4/index.html">Assignment 3 - Part 4</a>
+    </div>
 </body>
 </html>
