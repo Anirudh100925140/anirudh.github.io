@@ -42,6 +42,6 @@ function result() {
                         .replace("94 fahrenheit", temperature);
   }
 
-  story.textContent = ;
+  story.textContent = newStory;
   story.style.visibility = 'visible';
 }
