@@ -18,15 +18,16 @@ const insertZ = ["spontaneously combusted","melted into a puddle on the sidewalk
 randomize.addEventListener('click', result);
 
 function result() {
-    let newStory = storyText;
+    let newStory = storytext;
 
-    const Xitem = randomValueFromArray(insertX);
-    const Yitem = randomValueFromArray(insertY);
-    const Zitem = randomValueFromArray(insertZ);
+
+    const xItem = randomValueFromArray(insertX);
+    const yItem = randomValueFromArray(insertY);
+    const zItem = randomValueFromArray(insertZ);
     
-    newStory = newStory .replaceAll(":insertx",Xitem)
-                         .replace(":inserty",Yitem)
-                         .replace(":insertz",Zitem);
+    newStory = newStory .replaceAll(":insertx",xItem)
+                         .replace(":inserty",yItem)
+                         .replace(":insertz",zItem);
 
 
   if(customName.value !== '') {
