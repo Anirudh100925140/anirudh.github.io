@@ -28,4 +28,12 @@ class Ball {
     this.color = color; // fill ball shape with given colour.
     this.size = size; //radious of ball 
   }
+  //creating draw function
+  drawBall(){
+    ctx.beginPath(); //starts to draw
+    ctx.fillStyle = this.color; //fills color
+    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+    ctx.fill();
+
+  }
 }
