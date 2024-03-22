@@ -49,3 +49,10 @@ class Ball {
 
   }
 }
+
+//creating some balls
+const balls = [];
+while(balls.length < 25){
+  const ball = new Ball(50,100, 5, 5, 20, 'rgb(0, 55, 0)');
+  balls.push(ball);
+}
