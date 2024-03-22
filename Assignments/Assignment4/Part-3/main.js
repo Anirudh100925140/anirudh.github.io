@@ -94,11 +94,13 @@ while (balls.length < 25) {
 }
 //creating loop function
 function loop(){
+  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
+  ctx.fillRect(0, 0, width, height);
   //run necessary function
-  for(let i = 0; i < balls.length; i++){
-    balls[i].drawBall();
-    balls[i].updateBalls();
-    balls[i].collisionDetect();
+  for(const ball of balls){
+    ball.drawBall();
+    ball.updateBalls();
+    ball.collisionDetect();
 
   }
   //CALLING LOOP FUNCTION OVER AND OVER AGAIN
