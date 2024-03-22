@@ -56,3 +56,15 @@ while(balls.length < 25){
   const ball = new Ball(50,100, 5, 5, 20, 'rgb(0, 55, 0)');
   balls.push(ball);
 }
+//creating loop function
+function loop(){
+  //run necessary function
+  for(let i = 0; i < balls.length; i++){
+    balls[i].drawBall();
+    balls[i].updateBall();
+
+  }
+  //CALLING LOOP FUNCTION OVER AND OVER AGAIN
+  //and make animation smooth
+  requestAnimationFrame(loop);
+}
