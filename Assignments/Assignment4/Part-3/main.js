@@ -21,10 +21,10 @@ function randomRGB() {
 //creating a class ball
 class Ball {
   constructor (x, y, velX, velY, color, size){
-    this.x = x //horizontal position
+    this.x = x; //horizontal position
     this.y = y; //vertical osition
-    this.velx = velx; //velocity x added to codinate x  when we animate our ball
-    this.vely = vely;//velocity y added to codinate y
+    this.velX = velX; //velocity x added to codinate x  when we animate our ball
+    this.velY  = velY;//velocity y added to codinate y
     this.color = color; // fill ball shape with given colour.
     this.size = size; //radious of ball 
   }
@@ -37,7 +37,7 @@ class Ball {
 
   }
   //create update function
-  update() {
+  updateBalls() {
     if (this.x + this.size >= width) {
       this.velX = -Math.abs(this.velX);
     }
@@ -57,7 +57,23 @@ class Ball {
     this.x += this.velX;
     this.y += this.velY;
   }
-}
+  collisionDetect() {
+    for (const ball of balls) {
+      if (!(this === ball)) {
+        const dx = this.x - ball.x;
+        const dy = this.y - ball.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+  
+        if (distance < this.size + ball.size) {
+          ball.color = this.color = randomRGB();
+        }
+      }
+    }
+  }
+  }
+  
+ 
+
 
 //creating some balls
 const balls = [];
@@ -81,7 +97,7 @@ function loop(){
   //run necessary function
   for(let i = 0; i < balls.length; i++){
     balls[i].drawBall();
-    balls[i].updateBall();
+    balls[i].updateBalls();
 
   }
   //CALLING LOOP FUNCTION OVER AND OVER AGAIN
