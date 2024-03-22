@@ -98,6 +98,7 @@ function loop(){
   for(let i = 0; i < balls.length; i++){
     balls[i].drawBall();
     balls[i].updateBalls();
+    balls[i].collisionDetect();
 
   }
   //CALLING LOOP FUNCTION OVER AND OVER AGAIN
