@@ -17,3 +17,15 @@ function random(min, max) {
 function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
+
+//creating a class ball
+class Ball {
+  constructor (x, y, velX, velY, color, size){
+    this.x = x //horizontal position
+    this.y = y; //vertical osition
+    this.velX = velX; //velocity x added to codinate x  when we animate our ball
+    this.velY = velY;//velocity y added to codinate y
+    this.color = color; // fill ball shape with given colour.
+    this.size = size; //radious of ball 
+  }
+}
