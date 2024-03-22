@@ -18,10 +18,11 @@ const alts = {
 
 
 /* Looping through images */
-
+images,for Each(image => {
 const newImage = document.createElement('img');
-newImage.setAttribute('src', xxx);
-newImage.setAttribute('alt', xxx);
+newImage.setAttribute('src', 'images/' + image);
+newImage.setAttribute('alt', alts[image]);
 thumbBar.appendChild(newImage);
+)}
 
 /* Wiring up the Darken/Lighten button */
