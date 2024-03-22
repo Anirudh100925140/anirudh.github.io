@@ -37,16 +37,25 @@ class Ball {
 
   }
   //create update function
-  updateBall(){
-    if(this.x + this,size >= width || this.x - this.size <=0){
-      this.velx = this.velx;
+  update() {
+    if (this.x + this.size >= width) {
+      this.velX = -Math.abs(this.velX);
     }
-    if(this.y + this,size >= height || this.y - this.size <=0){
-      this.vely = this.vely;
-    }
-    this.x += this.velx;
-    this.y += this.vely;
 
+    if (this.x - this.size <= 0) {
+      this.velX = Math.abs(this.velX);
+    }
+
+    if (this.y + this.size >= height) {
+      this.velY = -Math.abs(this.velY);
+    }
+
+    if (this.y - this.size <= 0) {
+      this.velY = Math.abs(this.velY);
+    }
+
+    this.x += this.velX;
+    this.y += this.velY;
   }
 }
 
@@ -68,3 +77,5 @@ function loop(){
   //and make animation smooth
   requestAnimationFrame(loop);
 }
+//finally call the loop function once to start
+loop();
