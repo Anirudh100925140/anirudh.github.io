@@ -44,6 +44,8 @@ class Ball {
     if(this.y + this,size >= height || this.y - this.size <=0){
       this.vely = this.vely;
     }
+    this.x += this.velx;
+    this.y += this.vely;
 
   }
 }
