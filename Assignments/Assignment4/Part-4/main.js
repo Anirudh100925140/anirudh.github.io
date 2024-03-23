@@ -1,6 +1,4 @@
-//Element to show count of balls
-const countDisplay = document.querySelector('p');
-let count = 0;
+document.addEventListener("DOMContentLoaded", function() {
 
 // set up canvas
 
@@ -84,7 +82,7 @@ class Ball extends shape {
 
 class EvilCircle extends shape {
     constructor(x, y){
-      super(x, y, 20, 20);
+      super(x, y, 0, 0);
       this.color = 'white';
       this.size = 10;
       this.speed = 5;
@@ -137,9 +135,6 @@ class EvilCircle extends shape {
         }
       }
     
-    
-
-
 
 collisionDetect() {
   for (const ball of balls) {
@@ -192,8 +187,11 @@ function updateBallCount() {
 
 }
 
+window.addEventListener("keydown", (e) => {
+  evilCircle.keyboardMover(e);
+});
 
-const darkBall = new EvilCircle(random(0, width), random(0, height));
+
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
   ctx.fillRect(0, 0, width, height);
@@ -205,12 +203,13 @@ function loop() {
     ball.collisionDetect();
   }
 }
-  darkBall.draw();
-  darkBall.checkBounds();
-  darkBall.collisionDetect();
+  evilCircle.draw();
+  evilCircle.checkBounds();
+  evilCircle.collisionDetect();
 
 
   requestAnimationFrame(loop);
 }
 
 loop();
+});
