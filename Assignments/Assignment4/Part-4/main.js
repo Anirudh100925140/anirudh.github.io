@@ -1,3 +1,7 @@
+//Element to show count of balls
+const countDisplay = document.querySelector('p');
+let count = 0;
+
 // set up canvas
 
 const canvas = document.querySelector("canvas");
@@ -78,7 +82,7 @@ class Ball extends shape {
   }
 }
 
-  class EvilCircle extends shape {
+class EvilCircle extends shape {
     constructor(x, y){
       super(x, y, 20, 20);
       this.color = 'white';
@@ -143,7 +147,8 @@ collisionDetect() {
     }
   }
 }
-  }
+}
+  
 
 
  
