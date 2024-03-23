@@ -35,6 +35,14 @@ class Ball extends shape {
     this.exists = true;
   }
 
+class EvilCircle extends shape {
+  constructor(x, y){
+    super(x, y, 20, 20);
+    this.color = 'white';
+    this.size = 10;
+  }
+} 
+
   draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
