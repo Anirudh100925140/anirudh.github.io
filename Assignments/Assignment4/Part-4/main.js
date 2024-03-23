@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+
 
 // set up canvas
 
@@ -114,7 +114,7 @@ class EvilCircle extends shape {
         this.x += this.velX;
         this.y += this.velY;
       }
-      keyboardMover(e) {
+      keyboard(e) {
         switch (e.key) {
           case "ArrowLeft":
             this.velX = -this.speed; // Move left
@@ -188,7 +188,7 @@ function updateBallCount() {
 }
 
 window.addEventListener("keydown", (e) => {
-  evilCircle.keyboardMover(e);
+  evilCircle.keyboard(e);
 });
 
 
@@ -212,4 +212,4 @@ function loop() {
 }
 
 loop();
-});
+
