@@ -35,21 +35,13 @@ class Ball extends shape {
     this.exists = true;
   }
 
-class EvilCircle extends shape {
-  constructor(x, y){
-    super(x, y, 20, 20);
-    this.color = 'white';
-    this.size = 10;
-  }
-} 
-
   draw() {
     ctx.beginPath();
     ctx.fillStyle = this.color;
     ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
     ctx.fill();
   }
-
+ 
   update() {
     if (this.x + this.size >= width) {
       this.velX = -Math.abs(this.velX);
@@ -85,6 +77,45 @@ class EvilCircle extends shape {
     }
   }
 }
+
+  class EvilCircle extends shape {
+    constructor(x, y){
+      super(x, y, 20, 20);
+      this.color = 'white';
+      this.size = 10;
+    }
+
+
+window.addEventListener("keydown", (e) => {
+  switch (e.key) {
+    case "a":
+      this.x -= this.velX;
+      break;
+    case "d":
+      this.x += this.velX;
+      break;
+    case "w":
+      this.y -= this.velY;
+      break;
+    case "s":
+      this.y += this.velY;
+      break;
+    }
+  });
+}
+
+ // Method to draw the EvilCircle
+ draw() {
+  ctx.beginPath();
+  ctx.strokeStyle = this.color;
+  ctx.lineWidth = 3;
+  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+  ctx.stroke();
+}
+
+ 
+
+
 
 const balls = [];
 
