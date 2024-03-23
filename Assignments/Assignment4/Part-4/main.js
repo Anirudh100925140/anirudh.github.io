@@ -88,6 +88,16 @@ class EvilCircle extends shape {
       this.color = 'white';
       this.size = 10;
       this.speed = 5;
+    }
+
+       // Method to draw the EvilCircle
+ draw() {
+  ctx.beginPath();
+  ctx.strokeStyle = this.color;
+  ctx.lineWidth = 3;
+  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+  ctx.stroke();
+}
 
       checkBounds() {
         if (this.x + this.size >= width) {
@@ -106,34 +116,31 @@ class EvilCircle extends shape {
         this.x += this.velX;
         this.y += this.velY;
       }
+      keyboardMover(e) {
+        switch (e.key) {
+          case "ArrowLeft":
+            this.velX = -this.speed; // Move left
+            this.velY = 0;
+            break;
+          case "ArrowRight":
+            this.velX = this.speed; // Move right
+            this.velY = 0;
+            break;
+          case "ArrowUp":
+            this.velY = -this.speed; // Move up
+            this.velX = 0;
+            break;
+          case "ArrowDown":
+            this.velY = this.speed; // Move down
+            this.velX = 0;
+            break;
+        }
+      }
+    
     
 
- // Method to draw the EvilCircle
- draw() {
-  ctx.beginPath();
-  ctx.strokeStyle = this.color;
-  ctx.lineWidth = 3;
-  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-  ctx.stroke();
-}
-//check bounds-
-checkBounds() {
-  if ((this.x + this.size) >= width) {
-    this.x -= this.size;
-  }
 
-  if ((this.x - this.size) <= 0) {
-    this.x += this.size;
-  }
 
-  if ((this.y + this.size) >= height) {
-    this.y -= this.size;
-  }
-
-  if ((this.y - this.size) <= 0) {
-    this.y += this.size;
-  }
-}
 collisionDetect() {
   for (const ball of balls) {
     if (ball.exists) {
@@ -143,8 +150,8 @@ collisionDetect() {
 
       if (distance < this.size + ball.size) {
         ball.exists = false;
-        count--;
-        countDisplay.textContent = 'Ball count: ' + count;
+        updateBallCount();
+
       }
     }
   }
@@ -158,6 +165,9 @@ collisionDetect() {
 
 
 const balls = [];
+const evilCircle = new EvilCircle(random(0, width), 
+random(0, height));
+
 
 while (balls.length < 25) {
   const size = random(10, 20);
@@ -173,10 +183,15 @@ while (balls.length < 25) {
   );
 
   balls.push(ball);
-  count++;
-  countDisplay.textContent = 'Ball count: ' + count;
+ 
 
 }
+function updateBallCount() {
+  const remainingBalls = balls.filter(ball => ball.exists).length;
+  document.getElementById("ballCount").textContent = remainingBalls;
+
+}
+
 
 const darkBall = new EvilCircle(random(0, width), random(0, height));
 function loop() {
