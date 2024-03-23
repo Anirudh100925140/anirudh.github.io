@@ -85,7 +85,7 @@ class EvilCircle extends shape {
       super(x, y, 0, 0);
       this.color = 'white';
       this.size = 10;
-      this.speed = 5;
+      this.speed = 3;
     }
 
        // Method to draw the EvilCircle
@@ -116,19 +116,19 @@ class EvilCircle extends shape {
       }
       keyboard(e) {
         switch (e.key) {
-          case "ArrowLeft":
+          case "a":
             this.velX = -this.speed; // Move left
             this.velY = 0;
             break;
-          case "ArrowRight":
+          case "d":
             this.velX = this.speed; // Move right
             this.velY = 0;
             break;
-          case "ArrowUp":
+          case "w":
             this.velY = -this.speed; // Move up
             this.velX = 0;
             break;
-          case "ArrowDown":
+          case "s":
             this.velY = this.speed; // Move down
             this.velX = 0;
             break;
