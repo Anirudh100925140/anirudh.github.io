@@ -85,7 +85,7 @@ class EvilCircle extends shape {
       super(x, y, 0, 0);
       this.color = 'white';
       this.size = 10;
-      this.speed = 3;
+      this.speed = 5;
     }
 
        // Method to draw the EvilCircle
