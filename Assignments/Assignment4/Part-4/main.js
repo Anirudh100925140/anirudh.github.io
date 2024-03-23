@@ -27,7 +27,7 @@ class shape {
   }
 }
 
-class Ball {
+class Ball extends shape {
   constructor(x, y, velX, velY, color, size) {
     this.x = x;
     this.y = y;
