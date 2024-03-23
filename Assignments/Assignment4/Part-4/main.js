@@ -83,9 +83,7 @@ class Ball extends shape {
       super(x, y, 20, 20);
       this.color = 'white';
       this.size = 10;
-    }
-
-
+      
 window.addEventListener("keydown", (e) => {
   switch (e.key) {
     case "a":
