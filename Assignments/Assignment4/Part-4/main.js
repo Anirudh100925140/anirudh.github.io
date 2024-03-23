@@ -69,7 +69,7 @@ class Ball extends shape {
 
   collisionDetect() {
     for (const ball of balls) {
-      if (!(this === ball) && ball.exists ) {
+      if (!(this === ball)) {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -83,75 +83,73 @@ class Ball extends shape {
 }
 
 class EvilCircle extends shape {
-  constructor(x, y) {
-    super(x, y, 20, 20);
-    this.color = 'white';
-    this.size = 10;
+    constructor(x, y){
+      super(x, y, 20, 20);
+      this.color = 'white';
+      this.size = 10;
+      this.speed = 5;
 
-    window.addEventListener("keydown", (e) => {
-      switch (e.key) {
-        case "a":
-          this.x -= this.velX;
-          break;
-        case "d":
-          this.x += this.velX;
-          break;
-        case "w":
-          this.y -= this.velY;
-          break;
-        case "s":
-          this.y += this.velY;
-          break;
-      }
-    });
-  }
-
-  // Method to draw the EvilCircle
-  draw() {
-    ctx.beginPath();
-    ctx.strokeStyle = this.color;
-    ctx.lineWidth = 3;
-    ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-    ctx.stroke();
-  }
-
-  // Check bounds method
-  checkBounds() {
-    if ((this.x + this.size) >= width) {
-      this.x -= this.size;
-    }
-
-    if ((this.x - this.size) <= 0) {
-      this.x += this.size;
-    }
-
-    if ((this.y + this.size) >= height) {
-      this.y -= this.size;
-    }
-
-    if ((this.y - this.size) <= 0) {
-      this.y += this.size;
-    }
-  }
-
-  // Collision detection method
-  collisionDetect() {
-    for (const ball of balls) {
-      if (ball.exists) {
-        const dx = this.x - ball.x;
-        const dy = this.y - ball.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-
-        if (distance < this.size + ball.size) {
-          ball.exists = false;
-          count--;
-          countDisplay.textContent = 'Ball count: ' + count;
+      checkBounds() {
+        if (this.x + this.size >= width) {
+          this.velX = -this.velX;
         }
+        if (this.x - this.size <= 0){
+          this.velX = -this.velX;
+        }
+        if (this.y + this.size >= height){
+          this.velY = -this.velY;
+        }
+        if (this.y - this.size <= 0) {
+          this.velY = -this.velY;
+        }
+    
+        this.x += this.velX;
+        this.y += this.velY;
+      }
+    
+
+ // Method to draw the EvilCircle
+ draw() {
+  ctx.beginPath();
+  ctx.strokeStyle = this.color;
+  ctx.lineWidth = 3;
+  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
+  ctx.stroke();
+}
+//check bounds-
+checkBounds() {
+  if ((this.x + this.size) >= width) {
+    this.x -= this.size;
+  }
+
+  if ((this.x - this.size) <= 0) {
+    this.x += this.size;
+  }
+
+  if ((this.y + this.size) >= height) {
+    this.y -= this.size;
+  }
+
+  if ((this.y - this.size) <= 0) {
+    this.y += this.size;
+  }
+}
+collisionDetect() {
+  for (const ball of balls) {
+    if (ball.exists) {
+      const dx = this.x - ball.x;
+      const dy = this.y - ball.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+
+      if (distance < this.size + ball.size) {
+        ball.exists = false;
+        count--;
+        countDisplay.textContent = 'Ball count: ' + count;
       }
     }
   }
 }
-
+}
   
 
 
