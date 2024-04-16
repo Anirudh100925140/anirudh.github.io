@@ -90,6 +90,7 @@ nav a {
   text-transform: uppercase;
   text-decoration: none;
   color: black;
+  font-weight: bold;
 }
 
 nav .search {
